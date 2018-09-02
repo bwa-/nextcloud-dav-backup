@@ -19,6 +19,11 @@ import org.waehner.oc.i18n.ResourceReader;
 import org.waehner.oc.xml.settings.Settings;
 import org.waehner.oc.xml.users.Calendar;
 
+/**
+ * Consumes Calendar objects from the configuration file
+ * and exports data from the specified calendar to a file.
+ * @author bwa-
+ */
 public class CalendarConsumer implements Consumer<Calendar> {
 
 	private static final Logger logger = LogManager.getLogger();
@@ -26,8 +31,14 @@ public class CalendarConsumer implements Consumer<Calendar> {
 	private final String username;
 	private final String password;
 
-	public CalendarConsumer(String name, String password, Settings settings) {
-		this.username = name;
+	/**
+	 * Construct a new instance of this class
+	 * @param username Name of user that owns the calendar
+	 * @param password Password of user
+	 * @param settings Settings element (from the configuration file)
+	 */
+	public CalendarConsumer(String username, String password, Settings settings) {
+		this.username = username;
 		this.password = password;
 		this.settings = settings;
 	}

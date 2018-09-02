@@ -13,6 +13,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import org.waehner.oc.xml.settings.Settings;
 import org.waehner.oc.xml.users.User;
 
+/**
+ * Root element of the config file
+ * @author bwa-
+ */
 @XmlRootElement(name="NextcloudDavBackupConf")
 public class NextcloudDavBackupConf {
 
@@ -23,10 +27,16 @@ public class NextcloudDavBackupConf {
 	@XmlElement(name="User")
 	private final List<User> users;
 	
+	/**
+	 * @return Settings element of the config file
+	 */
 	public Settings getSettings() {
 		return settings;
 	}
 
+	/**
+	 * @return Users element of the config file
+	 */
 	public List<User> getUsers() {
 		return users;
 	}
@@ -36,6 +46,12 @@ public class NextcloudDavBackupConf {
 		this.users = null;
 	}
 	
+	/**
+	 * Unmarshals a config file and returns the root element as a pojo
+	 * @param configPath Path to the config file
+	 * @return the config file as a pojo
+	 * @throws JAXBException if unmarshalling fails
+	 */
 	public static final NextcloudDavBackupConf initialize(String configPath) throws JAXBException{
 		JAXBContext context = JAXBContext.newInstance(NextcloudDavBackupConf.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();

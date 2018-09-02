@@ -6,6 +6,10 @@ import java.util.ResourceBundle;
 
 import org.apache.commons.lang3.ArrayUtils;
 
+/**
+ * Class to handle resources
+ * @author bwa-
+ */
 public class ResourceReader {
 
 	/**

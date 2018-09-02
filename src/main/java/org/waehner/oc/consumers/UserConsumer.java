@@ -8,11 +8,20 @@ import org.waehner.oc.i18n.ResourceReader;
 import org.waehner.oc.xml.settings.Settings;
 import org.waehner.oc.xml.users.User;
 
+/**
+ * Consumes User objects from the configuration file
+ * and exports calendar and contacts data from the specified element to a file.
+ * @author bwa-
+ */
 public class UserConsumer implements Consumer<User> {
 	
 	private static final Logger logger = LogManager.getLogger();
 	private final Settings settings;
 	
+	/**
+	 * Construct a new instance of this class
+	 * @param settings Settings element (from the configuration file)
+	 */
 	public UserConsumer(Settings settings) {
 		this.settings = settings;
 	}

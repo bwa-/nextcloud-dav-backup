@@ -21,13 +21,26 @@ import org.waehner.oc.consumers.UserConsumer;
 import org.waehner.oc.i18n.ResourceReader;
 import org.waehner.oc.xml.NextcloudDavBackupConf;
 
+/**
+ * Runs backups of the calendars/contacts specified
+ * in the config file as caldav/carddav format files.
+ * @author bwa-
+ */
 public class NextcloudDavBackup {
-
-	
+	/**
+	 * Date format for log messages and the exported files.
+	 */
 	public static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd");
 
 	private static final Logger LOGGER = LogManager.getLogger(NextcloudDavBackup.class);
 
+	/**
+	 * Run the backup
+	 * @param args First and only expected argument is the path to the config file to use.
+	 * @throws JAXBException
+	 * @throws ClientProtocolException
+	 * @throws IOException
+	 */
 	public static void main(String[] args) throws JAXBException, ClientProtocolException, IOException {
 		
 		if(ArrayUtils.isEmpty(args)) {
@@ -43,6 +56,11 @@ public class NextcloudDavBackup {
 		conf.getUsers().forEach(new UserConsumer(conf.getSettings()));
 	}
 	
+	/**
+	 * @param username Nextcloud user name
+	 * @param password Nextcloud password for that user
+	 * @return A HttpClient object to use for the backup
+	 */
 	public static CloseableHttpClient getHttpClient(String username, String password) {
 		CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
 		credentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password));
