@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NextcloudDavBackupConf>
+	<Settings>
+		<BaseUrl value="https://server.url/context-if-exists" />
+		<CaldavUrl
+			value="$BASEURL/remote.php/dav/calendars/$USERNAME/$CALENDARNAME?export" />
+		<CarddavUrl
+			value="$BASEURL/remote.php/dav/addressbooks/users/$USERNAME/$ADDRESSBOOK/?export" />
+		<Outdir value="/tmp/path-to-outdir" />
+	</Settings>
+	<Users>
+		<User name="test1" password="test1pwd">
+			<Calendar name="calendar1" />
+			<Calendar name="calendar2" />
+			<Contacts name="contacts1" />
+		</User>
+		<User name="test2" password="test2pwd">
+			<Contacts name="contacts1" />
+			<Contacts name="contacts2" />
+			<Calendar name="calendar1" />
+			<Calendar name="calendar2" />
+		</User>
+	</Users>
+</NextcloudDavBackupConf>
