@@ -1,0 +1,9 @@
+/bin/
+.gradle/
+/build/
+.classpath
+.project
+.settings/
+/private.gradle
+/NextcloudDavBackup.log
+src/test/resourcs/testconf.xml
