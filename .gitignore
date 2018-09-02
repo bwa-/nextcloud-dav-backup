@@ -6,4 +6,4 @@
 .settings/
 /private.gradle
 /NextcloudDavBackup.log
-src/test/resourcs/testconf.xml
+src/test/resources/testconf.xml
