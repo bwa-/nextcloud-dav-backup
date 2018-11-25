@@ -4,6 +4,4 @@
 .classpath
 .project
 .settings/
-/private.gradle
 /NextcloudDavBackup.log
-src/test/resources/testconf.xml
