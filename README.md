@@ -5,14 +5,14 @@ Creates backups of Nextcloud calendars and addressbooks and stores them as Calda
 
 Create far jar with gradle task 'fatJar':
 
-./gradlew fatJar
+./gradlew shadowJar
 
 If you do not have a test configuration 'testconf.xml' file in src/test/resources you need to skip the tests:
 
-./gradlew fatJar -x test
+./gradlew shadowJar -x test
 
 # Run
 
-java -jar build/libs/NextcloudDavBackup-1.2-SNAPSHOT.jar conffile.xml
+java -jar build/libs/NextcloudDavBackup-1.3-SNAPSHOT.jar conffile.xml
 
 An example config file can be found in the root directory of the project.
