@@ -20,5 +20,3 @@ An example config file can be found in the root directory of the project.
 # Build status
 
 [![Build Status](https://jenkins.waehner.org/buildStatus/icon?job=NextcloudDavBackup)](https://jenkins.waehner.org/job/NextcloudDavBackup?style=plastic)
-
-[![Build Status](https://jenkins.waehner.org/job/NextcloudDavBackup/badge/icon)](https://jenkins.waehner.org/job/NextcloudDavBackup?style=plastic)
