@@ -1,7 +1,7 @@
 # nextcloud-dav-backup
 Creates backups of Nextcloud calendars and addressbooks and stores them as Caldav/Carddav exports
 
-# Build
+# build
 
 Create far jar with gradle task 'fatJar':
 
@@ -11,9 +11,9 @@ If you do not have a test configuration 'testconf.xml' file in src/test/resource
 
 ./gradlew shadowJar -x test
 
-# Run
+# run
 
-java -jar build/libs/NextcloudDavBackup-1.3-SNAPSHOT.jar conffile.xml
+java -jar build/libs/nextcloud-dav-backup-1.3-SNAPSHOT.jar conffile.xml
 
 An example config file can be found in the root directory of the project.
 
