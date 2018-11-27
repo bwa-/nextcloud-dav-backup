@@ -13,7 +13,7 @@ If you do not have a test configuration 'testconf.xml' file in src/test/resource
 
 # run
 
-java -jar build/libs/nextcloud-dav-backup-1.3-SNAPSHOT.jar conffile.xml
+java -jar build/libs/nextcloud-dav-backup-1.5-SNAPSHOT.jar conffile.xml
 
 An example config file can be found in the root directory of the project.
 

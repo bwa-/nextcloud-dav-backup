@@ -4,7 +4,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '4.0.3'
 } 
 
-version = '1.4'
+version = '1.5-SNAPSHOT'
 
 repositories {
 	mavenCentral()
@@ -19,3 +19,9 @@ dependencies {
 	
 	testCompile group: 'junit', name: 'junit', version: '4.12'
 } 
+
+task updateReadme {
+    ant.replaceregexp(file: "README.md", byline: true, match: "nextcloud-dav-backup-.*.jar", replace: "nextcloud-dav-backup-" + version + ".jar")
+}
+
+build.finalizedBy(updateReadme)
