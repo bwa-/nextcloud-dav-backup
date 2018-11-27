@@ -16,3 +16,7 @@ If you do not have a test configuration 'testconf.xml' file in src/test/resource
 java -jar build/libs/NextcloudDavBackup-1.3-SNAPSHOT.jar conffile.xml
 
 An example config file can be found in the root directory of the project.
+
+# Build status
+
+[![Build Status](https://jenkins.waehner.org/buildStatus/icon?job=NextcloudDavBackup)](https://jenkins.waehner.org/job/NextcloudDavBackup)
