@@ -1,4 +1,4 @@
-# NextcloudDavBackup
+# nextcloud-dav-backup
 Creates backups of Nextcloud calendars and addressbooks and stores them as Caldav/Carddav exports
 
 # Build
